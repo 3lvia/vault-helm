@@ -500,6 +500,10 @@ server:
   # This is useful if Vault must be signaled, e.g. to send a SIGHUP for a log rotation
   shareProcessNamespace: false
 
+  # skipSetCapabilities sets/unsets the flag "SKIP_SETCAP"
+  # This is useful if you want to use mlock.
+  skipSetCapabilities: true
+
   # extraArgs is a string containing additional Vault server arguments.
   extraArgs: ""
 

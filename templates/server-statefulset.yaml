@@ -109,8 +109,10 @@ spec:
               {{- end }}
             - name: SKIP_CHOWN
               value: "true"
+            {{- if .Values.server.skipSetCapabilities }}
             - name: SKIP_SETCAP
               value: "true"
+            {{- end }}
             - name: HOSTNAME
               valueFrom:
                 fieldRef:
